@@ -8,8 +8,66 @@
     <title>GoBox</title>
 </head>
 <body>
+
+    
+  <div>
+    <nav class="flex justify-end mx-16">
+        <a href="./index.html"><ul class="mx-20 py-16 flex space-x-10 justify-end">
+            <li class=" cursor-pointer 
+                        text-md
+                        relative
+                        before:absolute
+                        before:-bottom-2
+                        before:h-1
+                        before:bg-gradient-to-r
+                        before:from-black
+                        before:to-black
+                        hover:before:w-full"> Home</li></a>
+
+           <a href="./tracking.html"><li class="cursor-pointer 
+                        text-md
+                        relative
+                        before:absolute
+                        before:-bottom-2
+                        before:h-1
+                        before:bg-gradient-to-r
+                        before:from-black
+                        before:to-black
+                        hover:before:w-full">Tracking</li></a>
+
+                        <a href="./parcel.html"><li class="cursor-pointer 
+                        text-md
+                        relative
+                        before:absolute
+                        before:-bottom-2
+                        before:h-1
+                        before:bg-gradient-to-r
+                        before:from-black
+                        before:to-black
+                        hover:before:w-full">Package</li></a>
+
+            <a href="./ml.html"><li class="cursor-pointer 
+                        text-md
+                        relative
+                        before:absolute
+                        before:-bottom-2
+                        before:h-1
+                        before:bg-gradient-to-r
+                        before:from-black
+                        before:to-black
+                        hover:before:w-full">ML</li></a>
+            
+              
+        </ul>
+    </nav>
+</div>
+
+
+
+
+
     <br><br>
-    <div class="grid grid-cols-3 grid-rows-1 space-x-10 mx-10">
+    <div class=" lg:grid grid-cols-3 grid-rows-1 space-x-10 mx-10">
         <div class='bg-blue-200 rounded-lg h-96'>
         <!-- nested div 1 -->
                 <div>
@@ -49,7 +107,7 @@
     </div>  
 
 
-<br><br><br>
+<br><br><br><br><br>
 
 
 
@@ -57,10 +115,10 @@
 
 
 <div class="w-screen flex flex-col items-center justify-center">
-    <h1 class="px-20 font-semibold text-3xl underline font-mono">Create a Channel</h1>
+    <h1 class="px-20 font-semibold text-3xl underline font-mono">Personal Details</h1>
     <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
-        <form>
-          <div class="grid grid-cols-2 gap-4">
+        <form method="post" action="localhost4000/api/v1/adduser">
+          <div class=" gap-4">
             <div class="form-group mb-6">
               <input type="text" class="form-control
                 block
@@ -77,10 +135,10 @@
                 ease-in-out
                 m-0
                 focus:text-gray-700 focus:bg-white focus:border-purple-200 focus:outline-none" id="exampleInput123"
-                aria-describedby="emailHelp123" placeholder="First name">
+                aria-describedby="emailHelp123" placeholder="Name" name="name">
             </div>
             <div class="form-group mb-6">
-              <input type="text" class="form-control
+              <!-- <input type="number" class="form-control
                 block
                 w-full
                 px-3
@@ -95,7 +153,7 @@
                 ease-in-out
                 m-0
                 focus:text-gray-700 focus:bg-white focus:border-purple-200 focus:outline-none" id="exampleInput124"
-                aria-describedby="emailHelp124" placeholder="Last name">
+                aria-describedby="emailHelp124" placeholder="Number" name="phoneNum"> -->
             </div>
           </div>
           <div class="form-group mb-6">
@@ -113,7 +171,7 @@
               ease-in-out
               m-0
               focus:text-gray-700 focus:bg-white focus:border-purple-200 focus:outline-none" id="exampleInput125"
-              placeholder="Email address">
+              placeholder="Email address" name="email">
           </div>
           <div class="form-group mb-6">
                 <input type="text" class="form-control
@@ -131,7 +189,7 @@
                   ease-in-out
                   m-0
                   focus:text-gray-700 focus:bg-white focus:border-purple-200 focus:outline-none" id="exampleInput124"
-                  aria-describedby="emailHelp124" placeholder="Address">
+                  aria-describedby="emailHelp124" placeholder="Address" name="address">
           </div>
           <div class="form-group mb-6">
             <input type="tel" class="form-control
@@ -149,7 +207,7 @@
               ease-in-out
               m-0
               focus:text-gray-700 focus:bg-white focus:border-purple-200 focus:outline-none" id="exampleInput124"
-              aria-describedby="emailHelp124" placeholder="Phone number">
+              aria-describedby="emailHelp124" placeholder="Phone number" name="phoneNum">
       </div>
           <div class="form-group form-check text-center mb-6">
             <input type="checkbox"
@@ -157,7 +215,10 @@
               id="exampleCheck25" checked>
             <label class="form-check-label inline-block text-gray-800" for="exampleCheck25">I accept all the terms and conditions</label>
           </div>
-          <button type="submit" class="
+          <div class="">
+            Details registered. 
+          </div>
+          <button type="submit" id="user_submit_button" class="
             w-full
             px-6
             py-2.5
